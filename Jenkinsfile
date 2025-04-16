@@ -1,9 +1,16 @@
 pipeline{
   agent any
   stages{
-    stage('hello'){
+    stage('printing info'){
       steps{
-      echo "hello devops"
+        sh """ ${env.JOB_NAME}
+        echo ${env.BUILD_ID}
+        uptime
+        pwd
+        whoami
+        hostname
+        """
+      
        
       }
     }
