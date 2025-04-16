@@ -8,7 +8,7 @@ pipeline{
         pwd
         uptime
         whoami
-       hostname
+        hostname
         """
       }
     }
