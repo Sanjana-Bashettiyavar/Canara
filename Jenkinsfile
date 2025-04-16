@@ -1,16 +1,13 @@
 pipeline{
   agent any
+  tools{
+    maven 'maven'
+  }
   stages{
-    stage('printing info'){
+    stage('clean'){
       steps{
-        sh """ 
-        uptime
-        pwd
-        whoami
-        hostname
-        echo "$JOB_NAME"
-        echo "$BUILD_ID"
-        """
+        sh 'mvn clean
+     
       }
     }
   }
