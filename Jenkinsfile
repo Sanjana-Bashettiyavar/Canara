@@ -3,7 +3,7 @@ pipeline{
   stages{
     stage('printing info'){
       steps{
-        """ ${env.JOB_NAME}
+        sh """ ${env.JOB_NAME}
         echo ${env.BUILD_ID}
         pwd
         uptime
