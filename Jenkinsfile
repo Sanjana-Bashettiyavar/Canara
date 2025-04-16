@@ -3,15 +3,14 @@ pipeline{
   stages{
     stage('printing info'){
       steps{
-        sh """ ${env.JOB_NAME}
-        echo ${env.BUILD_ID}
+        sh """ 
         uptime
         pwd
         whoami
         hostname
+        echo "$JOB_NAME"
+        echo "$BUILD_ID"
         """
-      
-       
       }
     }
   }
